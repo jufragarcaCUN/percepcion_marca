@@ -8,16 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- ENLACE AL CSS EXTERNO -->
-    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- ENLACE AL CSS EXTERNO - RUTA CORREGIDA -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
     <!-- ============================================================
-    SIDEBAR
+    SIDEBAR - RUTA CORREGIDA
     ============================================================ -->
-    <!-- NOTA: Asegúrate de que la ruta a nbar.html sea correcta -->
-    <iframe src="./nbar.html" class="sidebar-iframe"></iframe>
+    <iframe src="components/sidebar.html" class="sidebar-iframe"></iframe>
 
     <!-- ============================================================
     CONTENIDO PRINCIPAL
@@ -112,12 +111,10 @@
             }, 30);
         }
 
-        // Ejecutar cuando la página cargue
         window.addEventListener('load', () => {
             counters.forEach(c => animateCounter(c.id, c.target, c.suffix));
         });
 
-        // Reanimar si el usuario vuelve a la pestaña
         document.addEventListener('visibilitychange', () => {
             if (!document.hidden) {
                 counters.forEach(c => {
