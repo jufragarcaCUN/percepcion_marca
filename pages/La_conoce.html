@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo A: Conoce la CUN (No Estudiantes)</title>
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Estilos corporativos -->
     <link rel="stylesheet" href="../css/estilos.css">
     
 </head>
@@ -24,6 +30,7 @@
     ============================================================ -->
     <div class="main-content-iframe">
         
+        <!-- TÍTULO PRINCIPAL -->
         <h1 class="main-title">
             <i class="fa-solid fa-eye" style="color: var(--cun-green); margin-right: 12px;"></i>
             Módulo A: Conoce la CUN (No Estudiantes)
@@ -40,7 +47,7 @@
                 <span class="badge-critico">Obligatorio</span>
             </h4>
 
-            <!-- P01 -->
+            <!-- P01: Nivel de conocimiento de la CUN -->
             <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro</span>
@@ -55,7 +62,7 @@
                 </ul>
             </div>
 
-            <!-- P02 -->
+            <!-- P02: Canales de conocimiento de la CUN -->
             <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro</span>
@@ -69,11 +76,11 @@
                     <li>Colegio / Eventos vocacionales</li>
                     <li>Internet / Buscadores de Google</li>
                     <li>Publicidad exterior / Medios</li>
-                    <li>Otro</li>
+                    <li>Otro (Especifique): <input type="text" style="border:1px solid #ccc; border-radius:4px; padding:4px 8px; font-size:0.9rem; margin-top:4px; width:100%; max-width:300px;" placeholder="Escriba su respuesta..."></li>
                 </ul>
             </div>
 
-            <!-- P03 -->
+            <!-- P03: Estudiante activo de la CUN -->
             <div>
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro</span>
@@ -89,7 +96,7 @@
         </div>
 
         <!-- ============================================================
-        SECCIÓN 2: JUSTIFICACIÓN DE LOS CAMBIOS
+        SECCIÓN 2: JUSTIFICACIÓN DE LOS CAMBIOS (ANÁLISIS METODOLÓGICO)
         ============================================================ -->
         <div class="card">
             <h4>
@@ -99,35 +106,52 @@
             </h4>
 
             <div style="margin-top: 1rem;">
+
+                <!-- Justificación 1 -->
                 <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                     <p style="font-weight: 700; color: var(--cun-green-dark);">1. Pregunta anterior:</p>
                     <p style="font-weight: 600;">¿Qué nivel de confianza le genera la CUN? (Alta / Media / Baja / Ninguna)</p>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> La opción binaria/cualitativa genérica era ambigua (no especificaba si era confianza académica o financiera). Se reemplaza por <strong>CNE-01</strong> (Seguridad en la calidad académica) en escala Likert 1 a 5 y <strong>CNE-02</strong> (NPS Externo del 0 al 10) para medir lealtad/confianza proyectada de forma cuantitativa e internacional.</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        <strong>Por qué cambia:</strong> La opción binaria/cualitativa genérica era ambigua (no especificaba si era confianza académica o financiera). Se reemplaza por <strong>CNE-01</strong> (Seguridad en la calidad académica) en escala Likert 1 a 5 y <strong>CNE-02</strong> (NPS Externo del 0 al 10) para medir lealtad/confianza proyectada de forma cuantitativa e internacional.
+                    </p>
                 </div>
 
+                <!-- Justificación 2 -->
                 <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                     <p style="font-weight: 700; color: var(--cun-green-dark);">2. Pregunta anterior:</p>
                     <p style="font-weight: 600;">Matriz de atributos con opción "No sabe" y escala cualitativa (Muy buena / Buena / Regular / Mala)</p>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Medir "Prestigio" y "Empleabilidad" a quien no estudia adentro generaba altos porcentajes de "No sabe". Se unifica en la matriz <strong>CNE-03</strong>, enfocada directamente en los 4 atributos de marca clave con escala numérica impar (1 a 5) para medir promedios de percepción real.</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        <strong>Por qué cambia:</strong> Medir "Prestigio" y "Empleabilidad" a quien no estudia adentro generaba altos porcentajes de "No sabe". Se unifica en la matriz <strong>CNE-03</strong>, enfocada directamente en los 4 atributos de marca clave con escala numérica impar (1 a 5) para medir promedios de percepción real.
+                    </p>
                 </div>
 
+                <!-- Justificación 3 -->
                 <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                     <p style="font-weight: 700; color: var(--cun-green-dark);">3. Pregunta anterior:</p>
                     <p style="font-weight: 600;">¿Qué tan costosa te parece la CUN? (Muy costosa / Costosa / Económica / Muy económica)</p>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Medir solo el costo percepctivo aislaba el valor real. Se sustituye por la evaluación de relación costo-beneficio dentro de <strong>CNE-03</strong> y se profundiza en las barreras reales con <strong>CNE-04</strong>.</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        <strong>Por qué cambia:</strong> Medir solo el costo percepctivo aislaba el valor real. Se sustituye por la evaluación de relación costo-beneficio dentro de <strong>CNE-03</strong> y se profundiza en las barreras reales con <strong>CNE-04</strong>.
+                    </p>
                 </div>
 
+                <!-- Justificación 4 -->
                 <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                     <p style="font-weight: 700; color: var(--cun-green-dark);">4. Pregunta anterior:</p>
                     <p style="font-weight: 600;">¿Cuál sería la principal razón para NO estudiar en la CUN? y ¿Recomendaría la CUN a alguien cercano? (Sí / Tal vez / No)</p>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> "Tal vez" ocultaba la intención real. Se sustituye por <strong>CNE-04</strong> (Barreras objetivas de no inscripción) y la escala estructurada de intención de matrícula a 12 meses (<strong>CNE-07</strong>).</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        <strong>Por qué cambia:</strong> "Tal vez" ocultaba la intención real. Se sustituye por <strong>CNE-04</strong> (Barreras objetivas de no inscripción) y la escala estructurada de intención de matrícula a 12 meses (<strong>CNE-07</strong>).
+                    </p>
                 </div>
 
+                <!-- Justificación 5 -->
                 <div>
                     <p style="font-weight: 700; color: var(--cun-green-dark);">5. Preguntas anteriores:</p>
                     <p style="font-weight: 600;">¿Con cuál de estas ideas asocia más a la CUN? y ¿Qué cree que diferencia a la CUN de otras universidades?</p>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Se solapaban al medir lo mismo con opciones similares. Se separan limpiamente en <strong>CNE-05</strong> (Asociación mental primaria de Posicionamiento) y <strong>CNE-06</strong> (Evaluación competitiva en la región).</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        <strong>Por qué cambia:</strong> Se solapaban al medir lo mismo con opciones similares. Se separan limpiamente en <strong>CNE-05</strong> (Asociación mental primaria de Posicionamiento) y <strong>CNE-06</strong> (Evaluación competitiva en la región).
+                    </p>
                 </div>
+
             </div>
         </div>
 
@@ -135,7 +159,9 @@
         SECCIÓN 3: CUESTIONARIO MÓDULO A (CNE-01 a CNE-10)
         ============================================================ -->
         
-        <!-- CNE-01 y CNE-02: REPUTACIÓN Y CONFIANZA -->
+        <!-- ============================================================
+        BLOQUE 1: REPUTACIÓN Y CONFIANZA (CNE-01, CNE-02, CNE-02B)
+        ============================================================ -->
         <div class="card">
             <h4>
                 <i class="fa-solid fa-star" style="color: var(--cun-green);"></i> 
@@ -143,7 +169,7 @@
                 <span class="badge-critico">Obligatorio</span>
             </h4>
 
-            <!-- CNE-01 -->
+            <!-- CNE-01: Seguridad en calidad académica -->
             <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Reputación / Respaldo Institucional</span>
@@ -159,7 +185,7 @@
                 </ul>
             </div>
 
-            <!-- CNE-02 -->
+            <!-- CNE-02: NPS Externo (Recomendación) -->
             <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Reputación / Lealtad (NPS Externo)</span>
@@ -174,7 +200,7 @@
                 </ul>
             </div>
 
-            <!-- CNE-02B -->
+            <!-- CNE-02B: Confianza institucional -->
             <div>
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Reputación / Confianza Institucional</span>
@@ -191,7 +217,9 @@
             </div>
         </div>
 
-        <!-- CNE-03 y CNE-04: PERCEPCIÓN DE ATRIBUTOS -->
+        <!-- ============================================================
+        BLOQUE 2: PERCEPCIÓN DE ATRIBUTOS (CNE-03, CNE-03B, CNE-04)
+        ============================================================ -->
         <div class="card">
             <h4>
                 <i class="fa-solid fa-chart-bar" style="color: var(--cun-green);"></i> 
@@ -199,7 +227,7 @@
                 <span class="badge-critico">Obligatorio</span>
             </h4>
 
-            <!-- CNE-03 -->
+            <!-- CNE-03: Matriz de atributos de marca -->
             <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción / Matriz Atributos de Marca</span>
@@ -215,7 +243,7 @@
                 </ul>
             </div>
 
-            <!-- CNE-03B -->
+            <!-- CNE-03B: Reconocimiento de marca -->
             <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción / Reconocimiento de Marca</span>
@@ -231,7 +259,7 @@
                 </ul>
             </div>
 
-            <!-- CNE-04 -->
+            <!-- CNE-04: Barreras de inscripción -->
             <div>
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción / Barreras de Inscripción</span>
@@ -245,12 +273,14 @@
                     <li>La ubicación de las sedes o falta de información</li>
                     <li>Prefiere otra universidad de la región</li>
                     <li>No tiene interés en estudiar actualmente</li>
-                    <li>Otro</li>
+                    <li>Otro (Especifique): <input type="text" style="border:1px solid #ccc; border-radius:4px; padding:4px 8px; font-size:0.9rem; margin-top:4px; width:100%; max-width:300px;" placeholder="Escriba su respuesta..."></li>
                 </ul>
             </div>
         </div>
 
-        <!-- CNE-05 a CNE-10: POSICIONAMIENTO -->
+        <!-- ============================================================
+        BLOQUE 3: POSICIONAMIENTO (CNE-05 a CNE-10)
+        ============================================================ -->
         <div class="card">
             <h4>
                 <i class="fa-solid fa-flag" style="color: var(--cun-green);"></i> 
@@ -258,7 +288,7 @@
                 <span class="badge-critico">Obligatorio</span>
             </h4>
 
-            <!-- CNE-05 -->
+            <!-- CNE-05: Asociación mental primaria -->
             <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento / Asociación Mental</span>
@@ -274,7 +304,7 @@
                 </ul>
             </div>
 
-            <!-- CNE-06 -->
+            <!-- CNE-06: Evaluación competitiva -->
             <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento / Evaluación Competitiva</span>
@@ -283,13 +313,13 @@
                 <p style="font-weight: 600; margin-bottom: 0.5rem;">Si comparara a la CUN con las demás universidades de su región o del país, ¿en qué posición la ubicaría?</p>
                 <ul style="padding-left: 20px; line-height: 1.8;">
                     <li>Entre mis 2 o 3 primeras opciones para estudiar</li>
-                    <li>Una opción secundaria</li>
+                    <li>Mi tercera o cuarta opción</li>
                     <li>Una de las últimas opciones que consideraría</li>
                     <li>No la consideraría en absoluto</li>
                 </ul>
             </div>
 
-            <!-- CNE-07 -->
+            <!-- CNE-07: Intención de compra -->
             <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento / Intención de Compra</span>
@@ -305,24 +335,24 @@
                 </ul>
             </div>
 
-            <!-- CNE-08 -->
+            <!-- CNE-08: Ranking de diferenciación (1 al 6) -->
             <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento / Diferenciación</span>
                     <span style="font-weight: 700; color: var(--text-dark);">CNE-08</span>
                 </div>
-                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué crees que hace diferente a la CUN de otras universidades de tu ciudad?</p>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué crees que hace diferente a la CUN de otras universidades de tu ciudad? <span style="font-weight: 400; color: var(--text-muted);">(Ordene del 1 al 6, donde 1 es el que MENOS peso tiene y 6 el que MÁS peso tiene)</span></p>
                 <ul style="padding-left: 20px; line-height: 1.8;">
-                    <li>Sus precios accesibles</li>
-                    <li>Sus horarios flexibles</li>
-                    <li>Su modelo educativo</li>
-                    <li>Su tecnología e innovación</li>
-                    <li>Su enfoque en empleabilidad</li>
-                    <li>Nada en particular</li>
+                    <li><input type="number" min="1" max="6" style="width:60px; border:1px solid #ccc; border-radius:4px; padding:4px; margin-right:8px;"> Sus precios accesibles</li>
+                    <li><input type="number" min="1" max="6" style="width:60px; border:1px solid #ccc; border-radius:4px; padding:4px; margin-right:8px;"> Sus horarios flexibles</li>
+                    <li><input type="number" min="1" max="6" style="width:60px; border:1px solid #ccc; border-radius:4px; padding:4px; margin-right:8px;"> Su modelo educativo</li>
+                    <li><input type="number" min="1" max="6" style="width:60px; border:1px solid #ccc; border-radius:4px; padding:4px; margin-right:8px;"> Su tecnología e innovación</li>
+                    <li><input type="number" min="1" max="6" style="width:60px; border:1px solid #ccc; border-radius:4px; padding:4px; margin-right:8px;"> Su enfoque en empleabilidad</li>
+                    <li><input type="number" min="1" max="6" style="width:60px; border:1px solid #ccc; border-radius:4px; padding:4px; margin-right:8px;"> Nada en particular</li>
                 </ul>
             </div>
 
-            <!-- CNE-09 -->
+            <!-- CNE-09: Atributos valorados (selección múltiple) -->
             <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento / Atributos Valorados</span>
@@ -339,7 +369,7 @@
                 </ul>
             </div>
 
-            <!-- CNE-10 -->
+            <!-- CNE-10: Percepción general de imagen -->
             <div>
                 <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento / Percepción General</span>
@@ -354,9 +384,11 @@
                     <li>5 - Muy positiva</li>
                 </ul>
             </div>
+
         </div>
 
     </div>
 
 </body>
 </html>
+```
