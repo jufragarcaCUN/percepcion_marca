@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes CUN - Módulo C</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+</head>
+<body>
+
+    <!-- ============================================================
+    SIDEBAR (iframe)
+    ============================================================ -->
+    <iframe src="../components/sidebar.html" class="sidebar-iframe"></iframe>
+
+    <!-- ============================================================
+    CONTENIDO PRINCIPAL
+    ============================================================ -->
+    <div class="main-content-iframe">
+        
+        <h1 class="main-title">
+            <i class="fa-solid fa-graduation-cap" style="color: var(--cun-green); margin-right: 12px;"></i>
+            Módulo C: Estudiantes CUN
+            <span class="badge-critico" style="font-size: 0.9rem;">Responde Comunidad CUN</span>
+        </h1>
+
+        <!-- ============================================================
+        SECCIÓN 1: LAS 3 PREGUNTAS DE ENTRADA (INTOCABLES)
+        ============================================================ -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-arrow-right" style="color: var(--cun-green);"></i>
+                Preguntas de Filtro Inicial
+                <span class="badge-critico">Obligatorio</span>
+            </h4>
+
+            <!-- PREGUNTA 1 -->
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro</span>
+                    <span class="badge-critico">Obligatorio</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">P01</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tanto conoce la CUN?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>La conoce bien</li>
+                    <li>La ha escuchado, pero no sabe mucho</li>
+                    <li>No la conoce</li>
+                </ul>
+            </div>
+
+            <!-- PREGUNTA 2 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro</span>
+                    <span class="badge-critico">Obligatorio</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">P02</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Dónde ha visto o escuchado sobre la CUN?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Conocidos</li>
+                    <li>Colegio</li>
+                    <li>Internet</li>
+                    <li>Otro</li>
+                </ul>
+            </div>
+
+            <!-- PREGUNTA 3 -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro</span>
+                    <span class="badge-critico">Obligatorio</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">P03</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Actualmente estudia en la CUN?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Sí</li>
+                    <li>No</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        SECCIÓN 2: JUSTIFICACIÓN DE LOS CAMBIOS
+        ============================================================ -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-pen-to-square" style="color: var(--cun-green);"></i>
+                Justificación de los Cambios
+                <span class="badge-neutral">Análisis Metodológico</span>
+            </h4>
+
+            <div style="margin-top: 1rem;">
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">1. Pregunta anterior:</p>
+                    <p style="font-weight: 600;">¿Qué nivel de confianza le genera la CUN? (Alta / Media / Baja / Ninguna)</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Era ambigua porque no aclaraba "confianza en qué". Se cambia por <strong>EST-01</strong> para medir la seguridad en la calidad académica y el respaldo al futuro profesional con una escala Likert de 1 a 5, lo que permite calcular promedios numéricos exactos.</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">2. Pregunta anterior:</p>
+                    <p style="font-weight: 600;">¿Volvería a elegir la CUN? (Sí / No / No sabe)</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> El formato binario Sí/No no mide la intensidad de la lealtad ni identifica la indecisión. Se cambia por <strong>EST-02</strong> (métrica internacional NPS 0 al 10) y <strong>EST-03</strong> (probabilidad de reelección 1 a 5).</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">3. Pregunta anterior:</p>
+                    <p style="font-weight: 600;">¿En qué aspectos cree que destaca la CUN? (Académico / Tecnológico / Servicio al cliente)</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Forzaba al usuario a seleccionar una sola opción. Se cambia por la matriz <strong>EST-04</strong> que evalúa simultáneamente calidad, flexibilidad, tecnología y precio en escala de 1 a 5.</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">4. Pregunta anterior:</p>
+                    <p style="font-weight: 600;">¿Qué fue lo que más influyó en su decisión de estudiar en la CUN?</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Miraba al pasado (razón de ingreso histórica). Se cambia por <strong>EST-08</strong> y <strong>EST-09</strong> para evaluar el diferenciador actual y la posición competitiva en la región.</p>
+                </div>
+
+                <div>
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">5. Preguntas anteriores:</p>
+                    <p style="font-weight: 600;">Preguntas abiertas informales sobre lo mejor, lo peor y describir en una palabra.</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> No tenían estructura estandarizada para analizar datos. Se cambian por <strong>EST-10</strong> dividido en 4 campos independientes (10A a 10D) para facilitar el procesamiento de texto.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        SECCIÓN 3: CUESTIONARIO FINAL (EST-01 a EST-10)
+        ============================================================ -->
+        
+        <!-- EST-01 a EST-03: REPUTACIÓN Y CONFIANZA -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-star" style="color: var(--cun-green);"></i> 
+                Reputación y Confianza
+                <span class="badge-critico">Obligatorio</span>
+            </h4>
+
+            <!-- EST-01 -->
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Reputación</span>
+                    <span class="badge-critico">Respaldo Institucional</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-01</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">En una escala de 1 a 5, ¿qué tan seguro/a te sientes con la calidad académica y la estabilidad de la CUN para respaldar tu futuro profesional?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>1 - Ninguna confianza</li>
+                    <li>2 - Poca confianza</li>
+                    <li>3 - Confianza moderada</li>
+                    <li>4 - Mucha confianza</li>
+                    <li>5 - Total confianza</li>
+                </ul>
+            </div>
+
+            <!-- EST-02 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Reputación / Lealtad</span>
+                    <span class="badge-pos">NPS Educativo</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-02</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tan probable es que recomiendes la CUN a un amigo, familiar o compañero de trabajo para realizar sus estudios superiores?</p>
+                <p style="color: var(--text-muted);"><em>Escala Numérica 0 al 10</em></p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>0 a 6: Detractores</li>
+                    <li>7 a 8: Pasivos</li>
+                    <li>9 a 10: Promotores</li>
+                </ul>
+            </div>
+
+            <!-- EST-03 -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Reputación / Retención</span>
+                    <span class="badge-critico">Reelección de Marca</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-03</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Si tuvieras que iniciar un nuevo programa académico, especialización o curso en este momento, ¿qué tan probable sería que eligieras nuevamente a la CUN?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>1 - Definitivamente NO la elegiría</li>
+                    <li>2 - Poco probable que la elija</li>
+                    <li>3 - Tal vez / Indeciso</li>
+                    <li>4 - Muy probable que la elija</li>
+                    <li>5 - Definitivamente SÍ la elegiría</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EST-04 a EST-07: PERCEPCIÓN DE ATRIBUTOS -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-chart-bar" style="color: var(--cun-green);"></i> 
+                Percepción de Atributos
+                <span class="badge-critico">Obligatorio</span>
+            </h4>
+
+            <!-- EST-04 -->
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción</span>
+                    <span class="badge-critico">Matriz Atributos Internos</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-04</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Teniendo en cuenta tu experiencia en la CUN, ¿cómo calificarías a la institución en cada uno de los siguientes aspectos?</p>
+                <p style="color: var(--text-muted);"><em>Escala 1 a 5: 1. Muy malo a 5. Excelente</em></p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li><strong>Calidad académica</strong> de sus programas/docentes</li>
+                    <li><strong>Flexibilidad</strong> en horarios y modalidades</li>
+                    <li><strong>Innovación</strong> en tecnología y plataformas</li>
+                    <li><strong>Relación calidad-precio</strong> (Accesibilidad)</li>
+                </ul>
+            </div>
+
+            <!-- EST-05 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción</span>
+                    <span class="badge-pos">Modelo Educativo</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-05</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿En qué medida consideras que la oferta educativa de la CUN facilita la combinación de estudios con tu vida laboral y personal?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>1 - Nada flexible / Muy difícil</li>
+                    <li>2 - Poco flexible</li>
+                    <li>3 - Moderadamente flexible</li>
+                    <li>4 - Muy flexible</li>
+                    <li>5 - Totalmente flexible / A la medida</li>
+                </ul>
+            </div>
+
+            <!-- EST-06 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción</span>
+                    <span class="badge-warn">Innovación Frente a Mercado</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-06</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tan innovadora y moderna percibes a la CUN en sus metodologías y herramientas tecnológicas frente a otras universidades del país?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>1 - Tradicional / Obsoleta</li>
+                    <li>2 - Poco innovadora</li>
+                    <li>3 - En promedio con el mercado</li>
+                    <li>4 - Innovadora</li>
+                    <li>5 - Muy innovadora / A la vanguardia</li>
+                </ul>
+            </div>
+
+            <!-- EST-07 -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento</span>
+                    <span class="badge-warn">Claridad Propuesta de Valor</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-07</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Cuando piensas en la CUN frente a otras universidades, ¿qué tan clara y definida consideras que es su propuesta educativa e identidad de marca?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>1 - Muy confusa / No sé qué la diferencia</li>
+                    <li>2 - Poco clara</li>
+                    <li>3 - Moderadamente clara</li>
+                    <li>4 - Clara</li>
+                    <li>5 - Totalmente clara y bien definida</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EST-08 a EST-10: POSICIONAMIENTO Y CUALITATIVO -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-flag" style="color: var(--cun-green);"></i> 
+                Posicionamiento y Cualitativo
+                <span class="badge-critico">Obligatorio</span>
+            </h4>
+
+            <!-- EST-08 -->
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento</span>
+                    <span class="badge-critico">Diferenciador Percibido</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-08</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Cuál de las siguientes opciones consideras que es el principal factor diferenciador de la CUN frente a otras instituciones?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Precios bajos y facilidades de pago</li>
+                    <li>Flexibilidad de horarios y opción virtual</li>
+                    <li>Formación práctica y orientada al empleo</li>
+                    <li>Innovación tecnológica en la educación</li>
+                    <li>Cercanía / Presencia en regiones</li>
+                    <li>Ninguno / No percibo diferenciador</li>
+                </ul>
+            </div>
+
+            <!-- EST-09 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento</span>
+                    <span class="badge-warn">Evaluación Competitiva</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-09</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Si comparas a la CUN con otras instituciones educativas similares de tu región, ¿en qué posición ubicarías a la CUN como opción para estudiar?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Mi primera y mejor opción en el mercado</li>
+                    <li>Entre las 2 o 3 mejores opciones disponibles</li>
+                    <li>Una opción secundaria (por debajo de otras)</li>
+                    <li>Una de las últimas opciones que consideraría</li>
+                </ul>
+            </div>
+
+            <!-- EST-10A -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción Cualitativa</span>
+                    <span class="badge-pos">Fortalezas y Oportunidades</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-10A</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿En qué aspecto destaca la CUN?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Académico</li>
+                    <li>Tecnológico</li>
+                    <li>Servicio</li>
+                </ul>
+            </div>
+
+            <!-- EST-10B -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción Cualitativa</span>
+                    <span class="badge-pos">Fortalezas y Oportunidades</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-10B</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué es lo MEJOR de la CUN?</p>
+                <p style="color: var(--text-muted);"><em>Texto abierto</em></p>
+            </div>
+
+            <!-- EST-10C -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción Cualitativa</span>
+                    <span class="badge-pos">Fortalezas y Oportunidades</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-10C</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué es lo QUE MÁS DEBE MEJORAR la CUN?</p>
+                <p style="color: var(--text-muted);"><em>Texto abierto</em></p>
+            </div>
+
+            <!-- EST-10D -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción Cualitativa</span>
+                    <span class="badge-pos">Fortalezas y Oportunidades</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">EST-10D</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Describe a la CUN en una palabra o frase corta</p>
+                <p style="color: var(--text-muted);"><em>Texto abierto</em></p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

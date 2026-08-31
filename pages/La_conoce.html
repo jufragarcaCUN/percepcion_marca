@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo A: Conoce la CUN (No Estudiantes)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+</head>
+<body>
+
+    <!-- ============================================================
+    SIDEBAR (iframe)
+    ============================================================ -->
+    <iframe src="../components/sidebar.html" class="sidebar-iframe"></iframe>
+
+    <!-- ============================================================
+    CONTENIDO PRINCIPAL
+    ============================================================ -->
+    <div class="main-content-iframe">
+        
+        <h1 class="main-title">
+            <i class="fa-solid fa-eye" style="color: var(--cun-green); margin-right: 12px;"></i>
+            Módulo A: Conoce la CUN (No Estudiantes)
+            <span class="badge-warn" style="font-size: 0.9rem;">Responde solo si NO estudia en la CUN</span>
+        </h1>
+
+        <!-- ============================================================
+        SECCIÓN 1: FILTRO INICIAL (OBLIGATORIO)
+        ============================================================ -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-arrow-right" style="color: var(--cun-green);"></i>
+                Preguntas de Filtro Inicial
+                <span class="badge-critico">Obligatorio</span>
+            </h4>
+
+            <!-- P01 -->
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro</span>
+                    <span class="badge-critico">Obligatorio</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">P01</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tanto conoce la CUN?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>La conoce bien</li>
+                    <li>La ha escuchado, pero no sabe mucho</li>
+                    <li style="color: #991b1b; font-weight: 700;">No la conoce (Redirige a Módulo B: No conoce la CUN)</li>
+                </ul>
+            </div>
+
+            <!-- P02 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro</span>
+                    <span class="badge-critico">Obligatorio</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">P02</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Dónde ha visto o escuchado sobre la CUN? <span style="font-weight: 400; color: var(--text-muted);">(Selección múltiple, máx. 3)</span></p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Instagram / Facebook / TikTok</li>
+                    <li>Recomendaciones de conocidos o familiares</li>
+                    <li>Colegio / Eventos vocacionales</li>
+                    <li>Internet / Buscadores de Google</li>
+                    <li>Publicidad exterior / Medios</li>
+                    <li>Otro</li>
+                </ul>
+            </div>
+
+            <!-- P03 -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro</span>
+                    <span class="badge-critico">Obligatorio</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">P03</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Actualmente estudia en la CUN?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li style="color: #059669; font-weight: 700;">Sí (Redirige a Módulo C: Estudiantes CUN)</li>
+                    <li style="font-weight: 700;">No (Continúa en Módulo A)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        SECCIÓN 2: JUSTIFICACIÓN DE LOS CAMBIOS
+        ============================================================ -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-pen-to-square" style="color: var(--cun-green);"></i>
+                Justificación de los Cambios
+                <span class="badge-neutral">Análisis Metodológico</span>
+            </h4>
+
+            <div style="margin-top: 1rem;">
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">1. Pregunta anterior:</p>
+                    <p style="font-weight: 600;">¿Qué nivel de confianza le genera la CUN? (Alta / Media / Baja / Ninguna)</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> La opción binaria/cualitativa genérica era ambigua (no especificaba si era confianza académica o financiera). Se reemplaza por <strong>CNE-01</strong> (Seguridad en la calidad académica) en escala Likert 1 a 5 y <strong>CNE-02</strong> (NPS Externo del 0 al 10) para medir lealtad/confianza proyectada de forma cuantitativa e internacional.</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">2. Pregunta anterior:</p>
+                    <p style="font-weight: 600;">Matriz de atributos con opción "No sabe" y escala cualitativa (Muy buena / Buena / Regular / Mala)</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Medir "Prestigio" y "Empleabilidad" a quien no estudia adentro generaba altos porcentajes de "No sabe". Se unifica en la matriz <strong>CNE-03</strong>, enfocada directamente en los 4 atributos de marca clave con escala numérica impar (1 a 5) para medir promedios de percepción real.</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">3. Pregunta anterior:</p>
+                    <p style="font-weight: 600;">¿Qué tan costosa te parece la CUN? (Muy costosa / Costosa / Económica / Muy económica)</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Medir solo el costo percepctivo aislaba el valor real. Se sustituye por la evaluación de relación costo-beneficio dentro de <strong>CNE-03</strong> y se profundiza en las barreras reales con <strong>CNE-04</strong>.</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">4. Pregunta anterior:</p>
+                    <p style="font-weight: 600;">¿Cuál sería la principal razón para NO estudiar en la CUN? y ¿Recomendaría la CUN a alguien cercano? (Sí / Tal vez / No)</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> "Tal vez" ocultaba la intención real. Se sustituye por <strong>CNE-04</strong> (Barreras objetivas de no inscripción) y la escala estructurada de intención de matrícula a 12 meses (<strong>CNE-07</strong>).</p>
+                </div>
+
+                <div>
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">5. Preguntas anteriores:</p>
+                    <p style="font-weight: 600;">¿Con cuál de estas ideas asocia más a la CUN? y ¿Qué cree que diferencia a la CUN de otras universidades?</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Se solapaban al medir lo mismo con opciones similares. Se separan limpiamente en <strong>CNE-05</strong> (Asociación mental primaria de Posicionamiento) y <strong>CNE-06</strong> (Evaluación competitiva en la región).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        SECCIÓN 3: CUESTIONARIO MÓDULO A (CNE-01 a CNE-07)
+        ============================================================ -->
+        
+        <!-- CNE-01 y CNE-02: REPUTACIÓN Y CONFIANZA -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-star" style="color: var(--cun-green);"></i> 
+                Reputación y Confianza
+                <span class="badge-critico">Obligatorio</span>
+            </h4>
+
+            <!-- CNE-01 -->
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Reputación / Respaldo Institucional</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">CNE-01</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">En una escala de 1 a 5, basándote en lo que conoces o has escuchado, ¿qué tan seguro/a te sentirías con la calidad académica de la CUN si decidieras estudiar en ella?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>1 - Ninguna confianza</li>
+                    <li>2 - Poca confianza</li>
+                    <li>3 - Confianza moderada</li>
+                    <li>4 - Mucha confianza</li>
+                    <li>5 - Total confianza</li>
+                </ul>
+            </div>
+
+            <!-- CNE-02 -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Reputación / Lealtad (NPS Externo)</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">CNE-02</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tan probable es que recomiendes la CUN a un amigo, familiar o compañero que busque universidad?</p>
+                <p style="color: var(--text-muted);"><em>Escala Numérica 0 al 10</em></p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>0 a 6: Detractores</li>
+                    <li>7 a 8: Pasivos</li>
+                    <li>9 a 10: Promotores</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CNE-03 y CNE-04: PERCEPCIÓN DE ATRIBUTOS -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-chart-bar" style="color: var(--cun-green);"></i> 
+                Percepción de Atributos
+                <span class="badge-critico">Obligatorio</span>
+            </h4>
+
+            <!-- CNE-03 -->
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción / Matriz Atributos de Marca</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">CNE-03</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Sin estar matriculado/a, ¿cómo calificas a la CUN en cada uno de los siguientes aspectos según tu percepción?</p>
+                <p style="color: var(--text-muted);"><em>Escala 1 a 5: 1. Muy malo | 2. Malo | 3. Regular | 4. Bueno | 5. Excelente</em></p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li><strong>Calidad académica percibida</strong></li>
+                    <li><strong>Flexibilidad</strong> en horarios y educación virtual</li>
+                    <li><strong>Innovación</strong> y modernidad tecnológica</li>
+                    <li><strong>Accesibilidad económica</strong> / Relación costo-beneficio</li>
+                </ul>
+            </div>
+
+            <!-- CNE-04 -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción / Barreras de Inscripción</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">CNE-04</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Cuál considera que es el principal motivo por el cual NO estudia o NO se ha matriculado en la CUN? <span style="font-weight: 400; color: var(--text-muted);">(Selección única)</span></p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Duda sobre la calidad académica</li>
+                    <li>Costo / Precio de la matrícula</li>
+                    <li>La marca no es suficientemente reconocida</li>
+                    <li>La ubicación de las sedes o falta de información</li>
+                    <li>Prefiere otra universidad de la región</li>
+                    <li>No tiene interés en estudiar actualmente</li>
+                    <li>Otro</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CNE-05 a CNE-07: POSICIONAMIENTO -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-flag" style="color: var(--cun-green);"></i> 
+                Posicionamiento
+                <span class="badge-critico">Obligatorio</span>
+            </h4>
+
+            <!-- CNE-05 -->
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento / Asociación Mental</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">CNE-05</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Al escuchar el nombre "CUN", ¿cuál de los siguientes conceptos considera que la define MEJOR? <span style="font-weight: 400; color: var(--text-muted);">(Selección única)</span></p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Educación económica y accesible</li>
+                    <li>Educación flexible (virtual y horarios para trabajar)</li>
+                    <li>Educación moderna e innovadora</li>
+                    <li>Educación de alta calidad</li>
+                    <li>Una universidad más del mercado / Ninguna en particular</li>
+                </ul>
+            </div>
+
+            <!-- CNE-06 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento / Evaluación Competitiva</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">CNE-06</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Si comparara a la CUN con las demás universidades de su región o del país, ¿en qué posición la ubicaría?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Entre mis 2 o 3 primeras opciones para estudiar</li>
+                    <li>Una opción secundaria</li>
+                    <li>Una de las últimas opciones que consideraría</li>
+                    <li>No la consideraría en absoluto</li>
+                </ul>
+            </div>
+
+            <!-- CNE-07 -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Posicionamiento / Intención de Compra</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">CNE-07</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tan probable es que usted o un familiar cercano considere inscribirse en la CUN en los próximos 12 meses?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>1 - Nada probable</li>
+                    <li>2 - Poco probable</li>
+                    <li>3 - Indeciso / Tal vez</li>
+                    <li>4 - Muy probable</li>
+                    <li>5 - Definitivamente sí</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

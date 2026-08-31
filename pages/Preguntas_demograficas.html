@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Demográficas - Filtro y Clasificación</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+</head>
+<body>
+
+    <!-- ============================================================
+    SIDEBAR (iframe)
+    ============================================================ -->
+    <iframe src="../components/sidebar.html" class="sidebar-iframe"></iframe>
+
+    <!-- ============================================================
+    CONTENIDO PRINCIPAL
+    ============================================================ -->
+    <div class="main-content-iframe">
+        
+        <h1 class="main-title">
+            <i class="fa-solid fa-id-card" style="color: var(--cun-green); margin-right: 12px;"></i>
+            Preguntas Demográficas - Filtro y Clasificación
+        </h1>
+
+        <!-- ============================================================ -->
+        <!-- FILTRO TERRITORIAL -->
+        <!-- ============================================================ -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-map-pin" style="color: var(--cun-green);"></i> 
+                Filtro Territorial
+                <span class="badge-neutral">Aplica al 100%</span>
+            </h4>
+
+            <div style="margin-top: 1rem;">
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro Territorial</span>
+                        <span class="badge-neutral">Obligatorio</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">F01</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿En qué ciudad vive actualmente?</p>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>Bogotá D.C.</li>
+                        <li>Medellín</li>
+                        <li>Santiago de Cali</li>
+                        <li>Barranquilla</li>
+                        <li>Cartagena de Indias</li>
+                        <li>Villavicencio</li>
+                        <li>Sincelejo</li>
+                        <li>Montería</li>
+                        <li>Pereira</li>
+                        <li>Ibagué</li>
+                        <li>Bucaramanga</li>
+                        <li>Santa Marta</li>
+                        <li>Neiva</li>
+                        <li>Yopal</li>
+                        <li style="color: #991b1b; font-weight: 700;">⚠️ Otra (finalizar encuesta)</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro Territorial</span>
+                        <span class="badge-neutral">Obligatorio</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">F02</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿En qué barrio o sector reside habitualmente?</p>
+                    <p style="color: var(--text-muted);"><em>[Texto abierto + lista asistida de barrios por ciudad]</em></p>
+                </div>
+
+                <div>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro Territorial</span>
+                        <span class="badge-neutral">Obligatorio</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">F03</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Hace cuánto vive en esta ciudad?</p>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>Menos de 6 meses</li>
+                        <li>6–11 meses</li>
+                        <li>1–3 años</li>
+                        <li>Más de 3 años</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- FILTRO DE EDAD -->
+        <!-- ============================================================ -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-calendar" style="color: var(--cun-green);"></i> 
+                Filtro de Edad
+                <span class="badge-critico">Finaliza si es menor de 17</span>
+            </h4>
+
+            <div style="margin-top: 1rem;">
+                <div>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro de Edad</span>
+                        <span class="badge-critico">Obligatorio</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">F04</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué edad tiene?</p>
+                    <p style="color: var(--text-muted);"><em>[Edad exacta en años]</em></p>
+                    <p style="color: #991b1b; font-weight: 700; margin-top: 8px;">⚠️ Si es menor de 17 años, finaliza la encuesta.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- DATOS SOCIODEMOGRÁFICOS -->
+        <!-- ============================================================ -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-users" style="color: var(--cun-green);"></i> 
+                Datos Sociodemográficos
+                <span class="badge-neutral">Aplica al 100%</span>
+            </h4>
+
+            <div style="margin-top: 1rem;">
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-sliders"></i> Demográfico</span>
+                        <span class="badge-neutral">Obligatorio</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">D01</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Con cuál sexo o identidad de género se identifica?</p>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>Mujer</li>
+                        <li>Hombre</li>
+                        <li>Otra identidad</li>
+                        <li>Prefiere no responder</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-sliders"></i> Demográfico</span>
+                        <span class="badge-neutral">Obligatorio</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">D02</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Cuál es el estrato de la vivienda donde reside?</p>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>Sin estrato / No sabe</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-sliders"></i> Demográfico</span>
+                        <span class="badge-neutral">Obligatorio</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">D03</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Cuál es el nivel educativo más alto que ha terminado?</p>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>Primaria</li>
+                        <li>Secundaria</li>
+                        <li>Técnico</li>
+                        <li>Tecnólogo</li>
+                        <li>Universitario</li>
+                        <li>Posgrado</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-sliders"></i> Demográfico</span>
+                        <span class="badge-neutral">Obligatorio</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">D04</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Cuál es su ocupación principal?</p>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>Estudia</li>
+                        <li>Trabaja</li>
+                        <li>Ambos (estudia y trabaja)</li>
+                        <li>Desempleado</li>
+                        <li>Hogar</li>
+                        <li>Pensionado</li>
+                        <li>Otro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- MARCA ESPONTÁNEA Y CONOCIMIENTO CUN -->
+        <!-- ============================================================ -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-bullhorn" style="color: var(--cun-green);"></i> 
+                Marca Espontánea y Conocimiento CUN
+                <span class="badge-neutral">Aplica al 100%</span>
+            </h4>
+
+            <div style="margin-top: 1rem;">
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Notoriedad</span>
+                        <span class="badge-pos">Top of Mind</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">M01</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Cuando piensa en universidades en Colombia, ¿cuál es la primera que se le viene a la mente?</p>
+                    <p style="color: var(--text-muted);"><em>[Respuesta abierta - obligatorio]</em></p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Notoriedad</span>
+                        <span class="badge-pos">Recordación Asistida</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">M02</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué otras universidades recuerda? (máximo 3)</p>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li><em>Universidad 1 - Obligatorio</em></li>
+                        <li><em>Universidad 2 - Obligatorio</em></li>
+                        <li><em>Universidad 3 - Obligatorio</em></li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Notoriedad</span>
+                        <span class="badge-warn">Consideración de Marca</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">M03</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Cuáles de estas universidades consideraría como opción para estudiar?</p>
+                    <p style="color: var(--text-muted);"><em>[Las opciones salen del plan de negocio]</em></p>
+                </div>
+
+                <div style="border-left: 5px solid var(--cun-green); padding-left: 1rem;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="badge-pilar"><i class="fa-solid fa-filter"></i> Filtro de Notoriedad CUN</span>
+                        <span class="badge-critico">Nodo de Ruteo</span>
+                        <span style="font-weight: 700; color: var(--text-dark);">FIL-01</span>
+                    </div>
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tanto conoce la CUN (Corporación Unificada Nacional de Educación Superior)?</p>
+                    <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.8rem;">
+                            <i class="fa-solid fa-arrow-right" style="color: var(--cun-green);"></i>
+                            <strong>La conoce bien / Ha interactuado con ella</strong>
+                            <span class="badge-pos">👉 Pasa a FIL-02</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.8rem;">
+                            <i class="fa-solid fa-arrow-right" style="color: var(--cun-green);"></i>
+                            <strong>La ha escuchado, pero no sabe mucho</strong>
+                            <span class="badge-warn">👉 Pasa a FIL-02</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.8rem;">
+                            <i class="fa-solid fa-arrow-right" style="color: var(--cun-green);"></i>
+                            <strong>No la conoce</strong>
+                            <span class="badge-critico">👉 Redirige a MÓDULO B (No La Conoce)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

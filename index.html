@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Percepción de Marca CUN - Instrumento de Medición</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Estilos corporativos -->
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Contenedor donde se inyectará el sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <!-- PESTAÑA 0: portada -->
+        <div id="tab-matriz" class="tab-pane active">
+            <iframe 
+                src="pages/portada.html" 
+                style="width: 100%; height: 100vh; border: none; border-radius: 12px; background: white;"
+                title="Matriz de Mapeo - Justificación Metodológica"
+            ></iframe>
+        </div>
+        <!-- PESTAÑA 1: MATRIZ DE MAPEO -->
+        <div id="tab-matriz" class="tab-pane active">
+            <iframe 
+                src="pages/Matriz_de_mapeo.html" 
+                style="width: 100%; height: 100vh; border: none; border-radius: 12px; background: white;"
+                title="Matriz de Mapeo - Justificación Metodológica"
+            ></iframe>
+        </div>
+
+        <!-- PESTAÑA 2: CIUDADES Y BARRIOS -->
+        <div id="tab-ciudades" class="tab-pane">
+            <iframe 
+                src="pages/Ciudades_y_barrios.html" 
+                style="width: 100%; height: 100vh; border: none; border-radius: 12px; background: white;"
+                title="Ciudades y Barrios - Plan de Muestreo"
+            ></iframe>
+        </div>
+
+        <!-- PESTAÑA 3: PREGUNTAS DEMOGRÁFICAS -->
+        <div id="tab-demograficas" class="tab-pane">
+            <iframe 
+                src="pages/Preguntas_demograficas.html" 
+                style="width: 100%; height: 100vh; border: none; border-radius: 12px; background: white;"
+                title="Preguntas Demográficas - Filtro y Clasificación"
+            ></iframe>
+        </div>
+
+        <!-- PESTAÑA 4: ESTUDIANTES CUN -->
+        <div id="tab-estudiantes" class="tab-pane">
+            <iframe 
+                src="pages/Estudiantes.html" 
+                style="width: 100%; height: 100vh; border: none; border-radius: 12px; background: white;"
+                title="Estudiantes CUN - Perfil 3"
+            ></iframe>
+        </div>
+
+        <!-- PESTAÑA 5: LA CONOCE (PERO NO ESTUDIA) -->
+        <div id="tab-la-conoce" class="tab-pane">
+            <iframe 
+                src="pages/La_conoce.html" 
+                style="width: 100%; height: 100vh; border: none; border-radius: 12px; background: white;"
+                title="La Conoce - Perfil 2"
+            ></iframe>
+        </div>
+
+        <!-- PESTAÑA 6: NO LA CONOCE -->
+        <div id="tab-no-conoce" class="tab-pane">
+            <iframe 
+                src="pages/No_laconoce.html" 
+                style="width: 100%; height: 100vh; border: none; border-radius: 12px; background: white;"
+                title="No La Conoce - Perfil 1"
+            ></iframe>
+        </div>
+
+    </main>
+</div>
+
+<!-- TOAST NOTIFICATION MODAL -->
+<div id="toastModal" class="toast-modal">
+    <i class="fa-solid fa-circle-check" style="color: var(--cun-green); font-size: 1.5rem;"></i>
+    <div>
+        <strong style="display: block; font-size: 0.95rem;" id="toastTitle">¡Encuesta Registrada!</strong>
+        <span style="font-size: 0.85rem; color: #94a3b8;" id="toastMsg">Los datos han sido guardados localmente en la sesión.</span>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="./js/main.js"></script>
+
+</body>
+</html>

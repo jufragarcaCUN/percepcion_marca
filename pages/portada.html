@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percepción de Marca · Inicio</title>
+    <!-- IMPORTACIÓN DE MONTSERRAT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- ENLACE AL CSS EXTERNO -->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <!-- ============================================================
+    SIDEBAR
+    ============================================================ -->
+    <!-- NOTA: Asegúrate de que la ruta a nbar.html sea correcta -->
+    <iframe src="./nbar.html" class="sidebar-iframe"></iframe>
+
+    <!-- ============================================================
+    CONTENIDO PRINCIPAL
+    ============================================================ -->
+    <div class="main-content">
+
+        <!-- ============================================================
+        HERO
+        ============================================================ -->
+        <section class="hero">
+
+            <div class="hero-text">
+                <span class="badge animate-fadeUp">📊 Percepción de Marca</span>
+                <h1 class="animate-fadeUp delay-1">
+                    Conoce cómo te <br />
+                    <span class="highlight">perciben tus clientes</span>
+                </h1>
+                <p class="animate-fadeUp delay-2">
+                    Esta herramienta te ayuda a medir la percepción de tu marca,
+                    identificando fortalezas y áreas de mejora para potenciar
+                    tu posicionamiento en el mercado.
+                </p>
+                <div class="hero-buttons animate-fadeUp delay-3">
+                    <a href="prueba.html" class="btn btn-primary">📝 Iniciar encuesta</a>
+                    <a href="teoria-marca.html" class="btn btn-secondary">📚 Conocer más</a>
+                </div>
+            </div>
+
+            <div class="hero-visual animate-fadeUp delay-4">
+                <div class="hero-shapes">
+                    <div class="box"></div>
+                    <div class="circle"></div>
+                    <div class="triangle"></div>
+                    <div class="leaf"></div>
+                    <div class="heart"></div>
+                    <div class="moon"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ============================================================
+        ESTADÍSTICAS
+        ============================================================ -->
+        <div class="stats">
+            <div class="stat-item animate-fadeUp delay-1">
+                <div class="number" id="count1">0</div>
+                <div class="label">Dimensiones de Marca</div>
+            </div>
+            <div class="stat-item animate-fadeUp delay-2">
+                <div class="number" id="count2">0</div>
+                <div class="label">Atributos Evaluados</div>
+            </div>
+            <div class="stat-item animate-fadeUp delay-3">
+                <div class="number" id="count3">0</div>
+                <div class="label">Niveles de Percepción</div>
+            </div>
+            <div class="stat-item animate-fadeUp delay-4">
+                <div class="number" id="count4">0</div>
+                <div class="label">Encuestas Realizadas</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+    JAVASCRIPT (CONTADORES ANIMADOS)
+    ============================================================ -->
+    <script>
+        // ============================================================
+        // CONTADORES ANIMADOS
+        // ============================================================
+        const counters = [
+            { id: 'count1', target: 8, suffix: '' },
+            { id: 'count2', target: 12, suffix: '' },
+            { id: 'count3', target: 5, suffix: '' },
+            { id: 'count4', target: 1248, suffix: '+' }
+        ];
+
+        function animateCounter(id, target, suffix) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            let current = 0;
+            const increment = Math.ceil(target / 40);
+            const interval = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(interval);
+                }
+                el.textContent = current + suffix;
+            }, 30);
+        }
+
+        // Ejecutar cuando la página cargue
+        window.addEventListener('load', () => {
+            counters.forEach(c => animateCounter(c.id, c.target, c.suffix));
+        });
+
+        // Reanimar si el usuario vuelve a la pestaña
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                counters.forEach(c => {
+                    const el = document.getElementById(c.id);
+                    if (el && el.textContent === '0') {
+                        animateCounter(c.id, c.target, c.suffix);
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
