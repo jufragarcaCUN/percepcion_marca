@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Percepción de Marca · Inicio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- ===== USANDO EL CSS GLOBAL ===== -->
+    <link rel="stylesheet" href="css/estilos.css">
+    
     <style>
         /* ============================================================
-           ESTILOS GLOBALES
+           ESTILOS ADICIONALES PARA LA PORTADA (no están en estilos.css)
            ============================================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Montserrat", sans-serif;
-        }
-
         body {
             background: #0f172a;
             color: #fff;
@@ -23,18 +21,10 @@
             position: relative;
         }
 
-        /* ============================================================
-           ANIMACIONES
-           ============================================================ */
+        /* ANIMACIONES */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes float {
@@ -49,69 +39,21 @@
             100% { transform: scale(1); opacity: 0.6; }
         }
 
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
         @keyframes gradientMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        .animate-fadeUp {
-            animation: fadeInUp 1s ease forwards;
-        }
-
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .animate-pulse {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .animate-slideLeft {
-            animation: slideInLeft 1s ease forwards;
-        }
-
+        .animate-fadeUp { animation: fadeInUp 1s ease forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .animate-pulse { animation: pulse 2s ease-in-out infinite; }
         .delay-1 { animation-delay: 0.2s; opacity: 0; }
         .delay-2 { animation-delay: 0.4s; opacity: 0; }
         .delay-3 { animation-delay: 0.6s; opacity: 0; }
         .delay-4 { animation-delay: 0.8s; opacity: 0; }
 
-        /* ============================================================
-           SIDEBAR (iframe)
-           ============================================================ */
-        .sidebar-iframe {
-            width: 380px;
-            height: 100vh;
-            border: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        /* ============================================================
-           CONTENIDO PRINCIPAL
-           ============================================================ */
-        .main-content {
-            margin-left: 420px;
-            min-height: 100vh;
-            padding: 2rem 3rem 4rem;
-        }
-
-        /* ============================================================
-           HERO
-           ============================================================ */
+        /* HERO */
         .hero {
             display: flex;
             align-items: center;
@@ -121,10 +63,7 @@
             min-height: 80vh;
         }
 
-        .hero-text {
-            flex: 1;
-        }
-
+        .hero-text { flex: 1; }
         .hero-text .badge {
             display: inline-block;
             background: rgba(34, 197, 94, 0.12);
@@ -137,14 +76,12 @@
             margin-bottom: 1.5rem;
             letter-spacing: 1px;
         }
-
         .hero-text h1 {
             font-size: 4rem;
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 1.2rem;
         }
-
         .hero-text h1 .highlight {
             background: linear-gradient(135deg, #22c55e, #166534);
             -webkit-background-clip: text;
@@ -153,7 +90,6 @@
             background-size: 200% 200%;
             animation: gradientMove 4s ease infinite;
         }
-
         .hero-text p {
             font-size: 1.2rem;
             color: #94a3b8;
@@ -161,13 +97,11 @@
             max-width: 550px;
             margin-bottom: 2rem;
         }
-
         .hero-buttons {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-
         .btn {
             padding: 0.9rem 2.5rem;
             border-radius: 30px;
@@ -179,155 +113,90 @@
             text-decoration: none;
             display: inline-block;
         }
-
         .btn-primary {
             background: linear-gradient(135deg, #22c55e, #166534);
             color: #fff;
             box-shadow: 0 4px 25px rgba(34, 197, 94, 0.2);
         }
-
-        .btn-primary:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 40px rgba(34, 197, 94, 0.3);
-        }
-
+        .btn-primary:hover { transform: translateY(-4px); box-shadow: 0 8px 40px rgba(34, 197, 94, 0.3); }
         .btn-secondary {
             background: rgba(255,255,255,0.04);
             color: #fff;
             border: 1px solid rgba(255,255,255,0.08);
         }
+        .btn-secondary:hover { background: rgba(255,255,255,0.08); transform: translateY(-4px); }
 
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateY(-4px);
-        }
-
-        .hero-visual {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            min-height: 400px;
-        }
-
-        /* ============================================================
-           FIGURAS GEOMÉTRICAS ANIMADAS
-           ============================================================ */
-        .hero-shapes {
-            position: relative;
-            width: 350px;
-            height: 350px;
-        }
-
+        /* FIGURAS */
+        .hero-visual { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; min-height: 400px; }
+        .hero-shapes { position: relative; width: 350px; height: 350px; }
         .hero-shapes .box {
             --size: 120px;
-            --gradient: linear-gradient(135deg, #22c55e, #166534);
-            width: var(--size);
-            height: var(--size);
-            background: var(--gradient);
+            width: var(--size); height: var(--size);
+            background: linear-gradient(135deg, #22c55e, #166534);
             border-radius: 16px;
-            position: absolute;
-            top: 20px;
-            left: 40px;
+            position: absolute; top: 20px; left: 40px;
             transform: rotate(12deg);
             box-shadow: 0 20px 60px rgba(34, 197, 94, 0.15);
             animation: float 4s ease-in-out infinite;
         }
-
         .hero-shapes .circle {
             --size: 100px;
-            --gradient: linear-gradient(135deg, #22c55e, #166534);
-            width: var(--size);
-            height: var(--size);
-            background: var(--gradient);
+            width: var(--size); height: var(--size);
+            background: linear-gradient(135deg, #22c55e, #166534);
             border-radius: 50%;
-            position: absolute;
-            bottom: 40px;
-            right: 20px;
+            position: absolute; bottom: 40px; right: 20px;
             box-shadow: 0 20px 60px rgba(34, 197, 94, 0.1);
             animation: float 3.5s ease-in-out infinite reverse;
         }
-
         .hero-shapes .triangle {
-            --triangle-shape: polygon(50% 0, 100% 100%, 0 100%);
-            --gradient: linear-gradient(135deg, #22c55e, #166534);
-            background: var(--gradient);
-            width: 80px;
-            height: 70px;
-            clip-path: var(--triangle-shape);
-            position: absolute;
-            top: 10px;
-            right: 30px;
+            width: 80px; height: 70px;
+            background: linear-gradient(135deg, #22c55e, #166534);
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            position: absolute; top: 10px; right: 30px;
             opacity: 0.6;
             animation: float 3s ease-in-out infinite 0.5s;
         }
-
         .hero-shapes .leaf {
             --size: 60px;
-            --gradient: linear-gradient(135deg, limegreen, darkgreen);
-            background: var(--gradient);
-            width: var(--size);
-            height: var(--size);
+            width: var(--size); height: var(--size);
+            background: linear-gradient(135deg, limegreen, darkgreen);
             border-radius: 50% 0 50% 0;
-            position: absolute;
-            bottom: 80px;
-            left: 10px;
+            position: absolute; bottom: 80px; left: 10px;
             opacity: 0.4;
             animation: float 3.5s ease-in-out infinite 0.8s;
         }
-
         .hero-shapes .heart {
             --size: 40px;
             background: #ef4444;
-            width: var(--size);
-            height: var(--size);
+            width: var(--size); height: var(--size);
             transform: rotate(45deg);
-            position: absolute;
-            bottom: 0;
-            right: 80px;
+            position: absolute; bottom: 0; right: 80px;
             opacity: 0.2;
             animation: pulse 2.5s ease-in-out infinite;
         }
-
         .hero-shapes .heart::before,
         .hero-shapes .heart::after {
             content: "";
             background: #ef4444;
             display: block;
-            width: var(--size);
-            height: var(--size);
+            width: var(--size); height: var(--size);
             border-radius: 50%;
             position: absolute;
         }
-
         .hero-shapes .heart::before { top: -50%; left: 0; }
         .hero-shapes .heart::after { top: 0; left: -50%; }
-
         .hero-shapes .moon {
             --size: 50px;
-            --offset: 100%;
-            --x: 70%;
-            --y: 50%;
+            width: var(--size); height: var(--size);
             background: #fbbf24;
-            width: var(--size);
-            height: var(--size);
             border-radius: 50%;
-            mask-image: radial-gradient(
-                circle calc(var(--size) * 0.45) at var(--x) var(--y),
-                transparent var(--offset),
-                black calc(var(--offset) + 1%)
-            );
-            position: absolute;
-            top: 100px;
-            right: 0;
+            mask-image: radial-gradient(circle calc(var(--size) * 0.45) at 70% 50%, transparent 100%, black calc(100% + 1%));
+            position: absolute; top: 100px; right: 0;
             opacity: 0.3;
             animation: float 4s ease-in-out infinite 1s;
         }
 
-        /* ============================================================
-           ESTADÍSTICAS
-           ============================================================ */
+        /* ESTADÍSTICAS */
         .stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -337,37 +206,13 @@
             border-bottom: 1px solid rgba(255,255,255,0.04);
             margin-top: 1rem;
         }
+        .stat-item { text-align: center; }
+        .stat-item .number { font-size: 2.5rem; font-weight: 900; color: #22c55e; }
+        .stat-item .label { font-size: 0.85rem; color: #94a3b8; margin-top: 0.2rem; }
 
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-item .number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #22c55e;
-        }
-
-        .stat-item .label {
-            font-size: 0.85rem;
-            color: #94a3b8;
-            margin-top: 0.2rem;
-        }
-
-        /* ============================================================
-           RESPONSIVE
-           ============================================================ */
-        @media (max-width: 1200px) {
-            .sidebar-iframe { width: 320px; }
-            .main-content { margin-left: 360px; padding: 2rem; }
-        }
-
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 2rem 0;
-            }
+            .hero { flex-direction: column; text-align: center; padding: 2rem 0; }
             .hero-text p { margin: 0 auto 2rem; }
             .hero-buttons { justify-content: center; }
             .hero-shapes { width: 280px; height: 280px; }
@@ -375,22 +220,7 @@
             .hero-shapes .circle { --size: 80px; }
             .hero-text h1 { font-size: 3rem; }
         }
-
-        @media (max-width: 900px) {
-            .sidebar-iframe { width: 280px; }
-            .main-content { margin-left: 300px; padding: 1.5rem; }
-            .stats { grid-template-columns: repeat(2, 1fr); }
-        }
-
         @media (max-width: 768px) {
-            .sidebar-iframe {
-                width: 100%;
-                height: auto;
-                position: relative;
-                margin-bottom: 1rem;
-                min-height: 60px;
-            }
-            .main-content { margin-left: 0; padding: 1rem; }
             .hero-text h1 { font-size: 2.5rem; }
             .hero-shapes { width: 220px; height: 220px; }
             .hero-shapes .box { --size: 70px; }
@@ -398,7 +228,6 @@
             .hero-shapes .triangle { width: 50px; height: 44px; }
             .stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
         }
-
         @media (max-width: 480px) {
             .hero-text h1 { font-size: 2rem; }
             .hero-text p { font-size: 1rem; }
@@ -411,29 +240,73 @@
 </head>
 <body>
 
-    <!-- ============================================================
-    SIDEBAR (iframe)
-    ============================================================ -->
-    <iframe src="/components/sidebar.html" class="sidebar-iframe"></iframe>
+    <!-- ===== SIDEBAR (iframe) ===== -->
+    <iframe src="components/sidebar.html" class="sidebar-iframe"></iframe>
 
-    <!-- ============================================================
-    CONTENIDO PRINCIPAL
-    ============================================================ -->
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
     <div class="main-content">
 
-        <!-- ============================================================
-        HERO - Percepción de Marca
-        ============================================================ -->
-        
-       
+        <!-- ===== HERO - Percepción de Marca ===== -->
+        <section class="hero">
+            <div class="hero-text animate-fadeUp delay-1">
+                <span class="badge"><i class="fas fa-chart-line"></i> Estudio 2026</span>
+                <h1>
+                    Percepción de<br />
+                    <span class="highlight">Marca CUN</span>
+                </h1>
+                <p>
+                    Investigación profunda sobre cómo las personas perciben la 
+                    Corporación Unificada Nacional de Educación Superior en las 
+                    14 ciudades priorizadas.
+                </p>
+                <div class="hero-buttons">
+                    <a href="pages/Matriz_de_mapeo.html" class="btn btn-primary">
+                        <i class="fas fa-sitemap"></i> Ver Matriz
+                    </a>
+                    <a href="pages/Ciudades_y_barrios.html" class="btn btn-secondary">
+                        <i class="fas fa-city"></i> Ciudades
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual animate-fadeUp delay-2">
+                <div class="hero-shapes">
+                    <div class="box animate-float"></div>
+                    <div class="circle animate-float"></div>
+                    <div class="triangle animate-float"></div>
+                    <div class="leaf animate-float"></div>
+                    <div class="heart animate-pulse"></div>
+                    <div class="moon animate-float"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ESTADÍSTICAS ===== -->
+        <div class="stats animate-fadeUp delay-3">
+            <div class="stat-item">
+                <div class="number" id="count1">0</div>
+                <div class="label">Ciudades Priorizadas</div>
+            </div>
+            <div class="stat-item">
+                <div class="number" id="count2">0</div>
+                <div class="label">Barrios Mapeados</div>
+            </div>
+            <div class="stat-item">
+                <div class="number" id="count3">0</div>
+                <div class="label">Segmentos Identificados</div>
+            </div>
+            <div class="stat-item">
+                <div class="number" id="count4">0</div>
+                <div class="label">Encuestas Aplicadas</div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- ============================================================
     JAVASCRIPT (CONTADORES ANIMADOS)
     ============================================================ -->
     <script>
-        // ============================================================
-        // CONTADORES ANIMADOS
-        // ============================================================
         const counters = [
             { id: 'count1', target: 8, suffix: '' },
             { id: 'count2', target: 12, suffix: '' },
