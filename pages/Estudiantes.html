@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudiantes CUN - Módulo C</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
-    
 </head>
 <body>
 
     <!-- ============================================================
-    SIDEBAR (iframe)
+         SIDEBAR (iframe)
     ============================================================ -->
-    <iframe src="../components/sidebar.html" class="sidebar-iframe"></iframe>
+    <iframe src="../components/sidebar.html"
+            class="sidebar-iframe"
+            title="Menú lateral de navegación"></iframe>
 
     <!-- ============================================================
-    CONTENIDO PRINCIPAL
+         CONTENIDO PRINCIPAL
     ============================================================ -->
     <div class="main-content-iframe">
-        
+
         <h1 class="main-title">
             <i class="fa-solid fa-graduation-cap" style="color: var(--cun-green); margin-right: 12px;"></i>
             Módulo C: Estudiantes CUN
@@ -31,7 +32,7 @@
         </h1>
 
         <!-- ============================================================
-        SECCIÓN 1: LAS 3 PREGUNTAS DE ENTRADA (INTOCABLES)
+             SECCIÓN 1: LAS 3 PREGUNTAS DE ENTRADA (INTOCABLES)
         ============================================================ -->
         <div class="card">
             <h4>
@@ -89,7 +90,133 @@
         </div>
 
         <!-- ============================================================
-        SECCIÓN 2: JUSTIFICACIÓN DE LOS CAMBIOS
+             SECCIÓN 2: PERFIL DEL ESTUDIANTE (SEGMENTACIÓN)
+             🔥 BLOQUE NUEVO — hace accionable el NPS cruzado
+        ============================================================ -->
+        <div class="card">
+            <h4>
+                <i class="fa-solid fa-user-tag" style="color: var(--cun-green);"></i>
+                Perfil del Estudiante (Segmentación)
+                <span class="badge-critico">Obligatorio</span>
+                <span class="badge-pos">Bloque Nuevo</span>
+            </h4>
+
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                Estas preguntas permiten <strong>cruzar el NPS y los promedios de percepción</strong>
+                por programa, modalidad, sede, semestre y antigüedad. Sin esta segmentación,
+                los resultados del módulo son un promedio único que no permite priorizar acciones.
+            </p>
+
+            <!-- SEG-01 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-graduation-cap"></i> Programa</span>
+                    <span class="badge-critico">Segmentación</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">SEG-01</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué programa académico estás cursando actualmente en la CUN?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Administración de Empresas</li>
+                    <li>Contaduría Pública</li>
+                    <li>Ingeniería de Sistemas</li>
+                    <li>Ingeniería Industrial</li>
+                    <li>Ingeniería de Software</li>
+                    <li>Diseño Gráfico</li>
+                    <li>Comunicación Social y Periodismo</li>
+                    <li>Publicidad y Mercadeo</li>
+                    <li>Psicología</li>
+                    <li>Trabajo Social</li>
+                    <li>Negocios Internacionales</li>
+                    <li>Especialización / Posgrado</li>
+                    <li>Otro (especificar)</li>
+                </ul>
+            </div>
+
+            <!-- SEG-02 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-laptop"></i> Modalidad</span>
+                    <span class="badge-critico">Segmentación</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">SEG-02</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿En qué modalidad estudias actualmente?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Presencial</li>
+                    <li>Virtual (100% en línea)</li>
+                    <li>A distancia (tradicional)</li>
+                    <li>Híbrida (combinación presencial + virtual)</li>
+                </ul>
+            </div>
+
+            <!-- SEG-03 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-location-dot"></i> Sede / Ciudad</span>
+                    <span class="badge-critico">Segmentación</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">SEG-03</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Desde qué sede o ciudad estás vinculado/a a la CUN?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Bogotá</li>
+                    <li>Medellín</li>
+                    <li>Santiago de Cali</li>
+                    <li>Barranquilla</li>
+                    <li>Cartagena de Indias</li>
+                    <li>Villavicencio</li>
+                    <li>Sincelejo</li>
+                    <li>Montería</li>
+                    <li>Pereira</li>
+                    <li>Ibagué</li>
+                    <li>Bucaramanga</li>
+                    <li>Santa Marta</li>
+                    <li>Neiva</li>
+                    <li>Yopal</li>
+                    <li>Otra sede / Ciudad</li>
+                </ul>
+            </div>
+
+            <!-- SEG-04 -->
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-list-ol"></i> Semestre</span>
+                    <span class="badge-critico">Segmentación</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">SEG-04</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿En qué semestre estás actualmente?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>1er semestre</li>
+                    <li>2do semestre</li>
+                    <li>3er semestre</li>
+                    <li>4to semestre</li>
+                    <li>5to semestre</li>
+                    <li>6to semestre</li>
+                    <li>7mo semestre</li>
+                    <li>8vo semestre</li>
+                    <li>9no semestre</li>
+                    <li>10mo semestre o más</li>
+                </ul>
+            </div>
+
+            <!-- SEG-05 -->
+            <div>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="badge-pilar"><i class="fa-solid fa-hourglass-half"></i> Antigüedad</span>
+                    <span class="badge-critico">Segmentación</span>
+                    <span style="font-weight: 700; color: var(--text-dark);">SEG-05</span>
+                </div>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Cuánto tiempo llevas vinculado/a a la CUN como estudiante?</p>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li>Menos de 6 meses</li>
+                    <li>Entre 6 meses y 1 año</li>
+                    <li>Entre 1 y 2 años</li>
+                    <li>Entre 2 y 4 años</li>
+                    <li>Más de 4 años</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SECCIÓN 3: JUSTIFICACIÓN DE LOS CAMBIOS
         ============================================================ -->
         <div class="card">
             <h4>
@@ -123,22 +250,28 @@
                     <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> Miraba al pasado (razón de ingreso histórica). Se cambia por <strong>EST-08</strong> y <strong>EST-09</strong> para evaluar el diferenciador actual y la posición competitiva en la región.</p>
                 </div>
 
-                <div>
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                     <p style="font-weight: 700; color: var(--cun-green-dark);">5. Preguntas anteriores:</p>
                     <p style="font-weight: 600;">Preguntas abiertas informales sobre lo mejor, lo peor y describir en una palabra.</p>
                     <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué cambia:</strong> No tenían estructura estandarizada para analizar datos. Se cambian por <strong>EST-10</strong> dividido en 4 campos independientes (10A a 10D) para facilitar el procesamiento de texto.</p>
+                </div>
+
+                <div>
+                    <p style="font-weight: 700; color: var(--cun-green-dark);">6. Bloque nuevo agregado: SEG-01 a SEG-05</p>
+                    <p style="font-weight: 600;">Perfil del Estudiante (Programa, Modalidad, Sede, Semestre, Antigüedad)</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><strong>Por qué se agrega:</strong> El Módulo C medía NPS, reputación y percepción, pero <strong>no capturaba variables de segmentación</strong>. Sin ellas, el resultado es un promedio único que no permite saber <em>qué</em> programa, sede o modalidad necesita intervención. Con SEG-01 a SEG-05, el NPS y los promedios de percepción se pueden <strong>cruzar por segmento</strong> y convertir el informe en evidencia accionable para la dirección.</p>
                 </div>
             </div>
         </div>
 
         <!-- ============================================================
-        SECCIÓN 3: CUESTIONARIO FINAL (EST-01 a EST-10)
+             SECCIÓN 4: CUESTIONARIO FINAL (EST-01 a EST-10)
         ============================================================ -->
-        
+
         <!-- EST-01 a EST-03: REPUTACIÓN Y CONFIANZA -->
         <div class="card">
             <h4>
-                <i class="fa-solid fa-star" style="color: var(--cun-green);"></i> 
+                <i class="fa-solid fa-star" style="color: var(--cun-green);"></i>
                 Reputación y Confianza
                 <span class="badge-critico">Obligatorio</span>
             </h4>
@@ -197,7 +330,7 @@
         <!-- EST-04 a EST-07: PERCEPCIÓN DE ATRIBUTOS -->
         <div class="card">
             <h4>
-                <i class="fa-solid fa-chart-bar" style="color: var(--cun-green);"></i> 
+                <i class="fa-solid fa-chart-bar" style="color: var(--cun-green);"></i>
                 Percepción de Atributos
                 <span class="badge-critico">Obligatorio</span>
             </h4>
@@ -274,7 +407,7 @@
         <!-- EST-08 a EST-10: POSICIONAMIENTO Y CUALITATIVO -->
         <div class="card">
             <h4>
-                <i class="fa-solid fa-flag" style="color: var(--cun-green);"></i> 
+                <i class="fa-solid fa-flag" style="color: var(--cun-green);"></i>
                 Posicionamiento y Cualitativo
                 <span class="badge-critico">Obligatorio</span>
             </h4>
@@ -360,6 +493,41 @@
                 <p style="font-weight: 600; margin-bottom: 0.5rem;">Describe a la CUN en una palabra o frase corta</p>
                 <p style="color: var(--text-muted);"><em>Texto abierto</em></p>
             </div>
+        </div>
+
+        <!-- ============================================================
+             SECCIÓN 5: NOTA METODOLÓGICA SOBRE SEGMENTACIÓN
+        ============================================================ -->
+        <div class="card" style="border-left: 6px solid var(--cun-green); background: #f0fdf4;">
+            <h4>
+                <i class="fa-solid fa-circle-info" style="color: var(--cun-green-dark);"></i>
+                Nota Metodológica: Por qué la Segmentación es Obligatoria
+                <span class="badge-pos">Lectura del Informe</span>
+            </h4>
+
+            <p style="margin-top: 1rem; color: var(--text-muted); line-height: 1.8;">
+                Sin el bloque <strong>SEG-01 a SEG-05</strong>, el NPS (EST-02) y los promedios
+                de percepción (EST-01, EST-04 a EST-07) serían <strong>números únicos</strong>
+                que describen a la CUN "en promedio", pero que no dicen a la dirección
+                <em>dónde</em> ni <em>a quién</em> intervenir. Ejemplo:
+            </p>
+
+            <div class="highlight" style="margin-top: 1rem;">
+                <strong>Ejemplo de lectura accionable:</strong>
+                <ul style="margin-top: 0.5rem;">
+                    <li>NPS global: <strong>42</strong> (dato descriptivo, poco útil)</li>
+                    <li>NPS por modalidad: <strong>Presencial 58 / Virtual 21</strong> → revela problema en virtual</li>
+                    <li>NPS por sede: <strong>Bogotá 61 / Yopal 12</strong> → revela problema en sede Yopal</li>
+                    <li>NPS por semestre: <strong>1° 70 / 5° 38 / 9° 25</strong> → revela caída progresiva de lealtad</li>
+                    <li>NPS por antigüedad: <strong>&lt;6m: 65 / &gt;4a: 18</strong> → revela desgaste en veteranos</li>
+                </ul>
+            </div>
+
+            <p style="margin-top: 1rem; color: var(--text-muted); line-height: 1.8;">
+                Con estos cruces, el informe pasa de ser un <strong>reporte descriptivo</strong>
+                a una <strong>herramienta de decisión</strong> que permite priorizar acciones
+                sobre el programa, la sede, la modalidad o el semestre que realmente lo necesita.
+            </p>
         </div>
 
     </div>

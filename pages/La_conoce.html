@@ -41,11 +41,7 @@
         SECCIÓN 1: FILTRO INICIAL (OBLIGATORIO)
         ============================================================ -->
         <div class="card">
-            <h4>
-                <i class="fa-solid fa-arrow-right" style="color: var(--cun-green);"></i>
-                Preguntas de Filtro Inicial
-                <span class="badge-critico">Obligatorio</span>
-            </h4>
+         
 
             <!-- P01: Nivel de conocimiento de la CUN -->
             <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
@@ -54,12 +50,7 @@
                     <span class="badge-critico">Obligatorio</span>
                     <span style="font-weight: 700; color: var(--text-dark);">P01</span>
                 </div>
-                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tanto conoce la CUN?</p>
-                <ul style="padding-left: 20px; line-height: 1.8;">
-                    <li>La conoce bien</li>
-                    <li>La ha escuchado, pero no sabe mucho</li>
-                    <li style="color: #991b1b; font-weight: 700;">No la conoce (Redirige a Módulo B: No conoce la CUN)</li>
-                </ul>
+                
             </div>
 
             <!-- P02: Canales de conocimiento de la CUN -->
@@ -90,6 +81,7 @@
                 <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Actualmente estudia en la CUN?</p>
                 <ul style="padding-left: 20px; line-height: 1.8;">
                     <li style="color: #059669; font-weight: 700;">Sí (Redirige a Módulo C: Estudiantes CUN)</li>
+                    <li style="color: #991b1b; font-weight: 700;"><strong>Si es estudiante de la cun se le agradece y aho para la encuenta</li>
                     <li style="font-weight: 700;">No (Continúa en Módulo A)</li>
                 </ul>
             </div>
@@ -186,19 +178,63 @@
             </div>
 
             <!-- CNE-02: NPS Externo (Recomendación) -->
-            <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
-                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
-                    <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Reputación / Lealtad (NPS Externo)</span>
-                    <span style="font-weight: 700; color: var(--text-dark);">CNE-02</span>
-                </div>
-                <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tan probable es que recomiendes la CUN a un amigo, familiar o compañero que busque universidad?</p>
-                <p style="color: var(--text-muted);"><em>Escala Numérica 0 al 10</em></p>
-                <ul style="padding-left: 20px; line-height: 1.8;">
-                    <li>0 a 6: Detractores</li>
-                    <li>7 a 8: Pasivos</li>
-                    <li>9 a 10: Promotores</li>
-                </ul>
-            </div>
+            <!-- NPS -->
+<div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+        <span class="badge-pilar"><i class="fa-solid fa-star"></i> NPS</span>
+        <span class="badge-neutral">Obligatorio</span>
+        <span style="font-weight: 700; color: var(--text-dark);">F04</span>
+    </div>
+    <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Qué tan probable es que recomiendes la CUN del 0 al 10?</p>
+    <ul style="padding-left: 20px; line-height: 1.8;">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+</div>
+
+<!-- Razón de la calificación -->
+<div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+        <span class="badge-pilar"><i class="fa-solid fa-comment"></i> Razón</span>
+        <span class="badge-neutral">Opcional</span>
+        <span style="font-weight: 700; color: var(--text-dark);">F05</span>
+    </div>
+
+    <label style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 18px; background: #fafcfb; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; margin-bottom: 0.8rem;">
+        <input type="checkbox" id="habilitar_razon" style="width: 20px; height: 20px; margin-top: 2px; accent-color: var(--cun-green); cursor: pointer; flex-shrink: 0;">
+        <span style="font-size: 0.95rem; color: var(--text-dark);">
+            ¿Deseas contarnos por qué diste esa calificación?
+        </span>
+    </label>
+
+    <div id="bloque_razon" style="display: none;">
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">¿Por qué diste esa calificación?</p>
+        <textarea id="razon_nps" name="razon_nps" rows="4" placeholder="Escribe aquí tu respuesta..." style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-family: inherit; font-size: 0.95rem; resize: vertical;"></textarea>
+    </div>
+</div>
+
+<script>
+    const checkRazon = document.getElementById('habilitar_razon');
+    const bloqueRazon = document.getElementById('bloque_razon');
+
+    checkRazon.addEventListener('change', () => {
+        if (checkRazon.checked) {
+            bloqueRazon.style.display = 'block';
+        } else {
+            bloqueRazon.style.display = 'none';
+            document.getElementById('razon_nps').value = '';
+        }
+    });
+</script>
 
             <!-- CNE-02B: Confianza institucional -->
             <div>
@@ -240,12 +276,14 @@
                     <li><strong>Flexibilidad</strong> en horarios y educación virtual</li>
                     <li><strong>Innovación</strong> y modernidad tecnológica</li>
                     <li><strong>Accesibilidad económica</strong> / Relación costo-beneficio</li>
+                    <li><strong>No tengo suficinte información</li>
+
                 </ul>
             </div>
 
             <!-- CNE-03B: Reconocimiento de marca -->
             <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
-                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
+                <div style="display: flex; gap: 1rem; align-items: center; marsgin-bottom: 0.5rem;">
                     <span class="badge-pilar"><i class="fa-solid fa-layer-group"></i> Percepción / Reconocimiento de Marca</span>
                     <span style="font-weight: 700; color: var(--text-dark);">CNE-03B</span>
                 </div>
@@ -256,6 +294,7 @@
                     <li>3 - Moderadamente reconocida</li>
                     <li>4 - Muy reconocida</li>
                     <li>5 - Extremadamente reconocida</li>
+                    <li><strong>No sabe, no responde</strong> / No sabe, no responde</li>
                 </ul>
             </div>
 
