@@ -10,46 +10,332 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
+
+    <style>
+        /* ============================================================
+           BOTÓN CERRAR / ABRIR
+        ============================================================ */
+
+        .sidebar {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-sidebar {
+            position: absolute;
+            top: 15px;
+            right: 12px;
+
+            width: 34px;
+            height: 34px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: transparent;
+            color: var(--cun-green);
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 16px;
+
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .toggle-sidebar:hover {
+            background: rgba(0, 128, 96, 0.10);
+            transform: scale(1.05);
+        }
+
+        /* ============================================================
+           ESTADO CERRADO
+        ============================================================ */
+
+        .sidebar.closed {
+            width: 70px;
+        }
+
+        .sidebar.closed .brand {
+            justify-content: center;
+        }
+
+        .sidebar.closed .brand .cun,
+        .sidebar.closed .brand .sub,
+        .sidebar.closed .nav-label,
+        .sidebar.closed .nav-btn {
+            font-size: 0;
+        }
+
+        .sidebar.closed .brand i {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .sidebar.closed .nav-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 14px 0;
+        }
+
+        .sidebar.closed .nav-btn i {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .sidebar.closed .toggle-sidebar {
+            right: 18px;
+        }
+
+        /* ============================================================
+           BOTÓN DE ABRIR CUANDO ESTÁ CERRADO
+        ============================================================ */
+
+        .open-sidebar {
+            position: fixed;
+
+            top: 20px;
+            left: 10px;
+
+            width: 42px;
+            height: 42px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: white;
+            color: var(--cun-green);
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+            cursor: pointer;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 18px;
+
+            z-index: 9999;
+
+            transition: all 0.2s ease;
+        }
+
+        .open-sidebar:hover {
+            transform: scale(1.05);
+        }
+
+        .open-sidebar.visible {
+            display: flex;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="sidebar">
+
+    <!-- ============================================================
+         SIDEBAR
+    ============================================================ -->
+
+    <div class="sidebar" id="sidebar">
+
+        <!-- BOTÓN CERRAR -->
+        <button
+            class="toggle-sidebar"
+            id="toggleSidebar"
+            title="Cerrar menú"
+            aria-label="Cerrar menú">
+
+            <i class="fas fa-chevron-left"></i>
+
+        </button>
+
+
+        <!-- ========================================================
+             MARCA
+        ======================================================== -->
+
         <div class="brand">
+
             <i class="fas fa-chart-pie" style="color: var(--cun-green);"></i>
+
             <span class="cun">CUN</span>
-            <span class="sub">Percepción de Marca</span>
+
+            <span class="sub">
+                Percepción de Marca
+            </span>
+
         </div>
 
-        <div class="nav-label">Navegación</div>
-        
-        <a href="../index.html" target="_top" class="nav-btn active">
-            <i class="fas fa-home"></i> Portada
-        </a>
-        
-        <a href="../pages/Matriz_de_mapeo.html" target="_top" class="nav-btn">
-            <i class="fas fa-sitemap"></i> Matriz de Mapeo
-        </a>
-        
-        <a href="../pages/Ciudades_y_barrios.html" target="_top" class="nav-btn">
-            <i class="fas fa-city"></i> Ciudades y Barrios
-        </a>
-        
-        <a href="../pages/Preguntas_demograficas.html" target="_top" class="nav-btn">
-            <i class="fas fa-id-card"></i> Preguntas Demográficas
-        </a>
-        <a href="../pages/La_conoce.html" target="_top" class="nav-btn">
-            <i class="fas fa-user-check"></i> La Conoce
-        </a>
-        <a href="../pages/No_laconoce.html" target="_top" class="nav-btn">
-            <i class="fas fa-user-slash"></i> No La Conoce
-        
+
+        <!-- ========================================================
+             NAVEGACIÓN
+        ======================================================== -->
+
+        <div class="nav-label">
+            Navegación
+        </div>
 
 
-        <a href="/pages/gustos_tendencias/index_gustos.html" target="_top" class="nav-btn">
-            <i class="fas fa-clipboard-list"></i> Encuesta Hábitos
+        <a href="../index.html"
+           target="_top"
+           class="nav-btn active">
+
+            <i class="fas fa-home"></i>
+
+            <span>Portada</span>
+
         </a>
-        <a href="/pages/gustos_tendencias/metodologia_habitos.html" target="_top" class="nav-btn">
-            <i class="fas fa-clipboard-list"></i> Encuesta Hábitos Metodología 
+
+
+        <a href="../pages/Matriz_de_mapeo.html"
+           target="_top"
+           class="nav-btn">
+
+            <i class="fas fa-sitemap"></i>
+
+            <span>Matriz de Mapeo</span>
+
         </a>
+
+
+        <a href="../pages/Ciudades_y_barrios.html"
+           target="_top"
+           class="nav-btn">
+
+            <i class="fas fa-city"></i>
+
+            <span>Ciudades y Barrios</span>
+
+        </a>
+
+
+        <a href="../pages/Preguntas_demograficas.html"
+           target="_top"
+           class="nav-btn">
+
+            <i class="fas fa-id-card"></i>
+
+            <span>Preguntas Demográficas</span>
+
+        </a>
+
+
+        <a href="../pages/La_conoce.html"
+           target="_top"
+           class="nav-btn">
+
+            <i class="fas fa-user-check"></i>
+
+            <span>La Conoce</span>
+
+        </a>
+
+
+        <a href="../pages/No_laconoce.html"
+           target="_top"
+           class="nav-btn">
+
+            <i class="fas fa-user-slash"></i>
+
+            <span>No La Conoce</span>
+
+        </a>
+
+
+        <a href="/pages/gustos_tendencias/index_gustos.html"
+           target="_top"
+           class="nav-btn">
+
+            <i class="fas fa-clipboard-list"></i>
+
+            <span>Encuesta Hábitos</span>
+
+        </a>
+
+
+        <a href="/pages/gustos_tendencias/metodologia_habitos.html"
+           target="_top"
+           class="nav-btn">
+
+            <i class="fas fa-clipboard-list"></i>
+
+            <span>Encuesta Hábitos Metodología</span>
+
+        </a>
+
     </div>
+
+
+    <!-- ============================================================
+         BOTÓN PARA VOLVER A ABRIR
+    ============================================================ -->
+
+    <button
+        class="open-sidebar"
+        id="openSidebar"
+        title="Abrir menú"
+        aria-label="Abrir menú">
+
+        <i class="fas fa-chevron-right"></i>
+
+    </button>
+
+
+    <!-- ============================================================
+         JAVASCRIPT
+    ============================================================ -->
+
+    <script>
+
+        const sidebar = document.getElementById("sidebar");
+        const toggleSidebar = document.getElementById("toggleSidebar");
+        const openSidebar = document.getElementById("openSidebar");
+
+
+        /* ============================================================
+           CERRAR SIDEBAR
+        ============================================================ */
+
+        toggleSidebar.addEventListener("click", function () {
+
+            sidebar.classList.add("closed");
+
+            openSidebar.classList.add("visible");
+
+            toggleSidebar.innerHTML =
+                '<i class="fas fa-chevron-right"></i>';
+
+            toggleSidebar.title = "Abrir menú";
+
+        });
+
+
+        /* ============================================================
+           ABRIR SIDEBAR
+        ============================================================ */
+
+        openSidebar.addEventListener("click", function () {
+
+            sidebar.classList.remove("closed");
+
+            openSidebar.classList.remove("visible");
+
+            toggleSidebar.innerHTML =
+                '<i class="fas fa-chevron-left"></i>';
+
+            toggleSidebar.title = "Cerrar menú";
+
+        });
+
+    </script>
+
 </body>
 </html>
